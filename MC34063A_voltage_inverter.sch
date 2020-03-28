@@ -1,0 +1,324 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:MC34063AP U1
+U 1 1 5E7FF08E
+P 5500 2700
+F 0 "U1" H 5200 3050 50  0000 L CNN
+F 1 "MC34063AP" H 5500 3050 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5550 2250 50  0001 L CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MC34063A-D.PDF" H 6000 2600 50  0001 C CNN
+	1    5500 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5E7FF665
+P 5000 3200
+F 0 "C2" H 5025 3300 50  0000 L CNN
+F 1 "1500p" H 5025 3100 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P2.50mm" H 5038 3050 50  0001 C CNN
+F 3 "~" H 5000 3200 50  0001 C CNN
+	1    5000 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3050 5000 2900
+Wire Wire Line
+	5000 2900 5100 2900
+Wire Wire Line
+	5000 3350 5000 3750
+Wire Wire Line
+	5000 3750 5500 3750
+Wire Wire Line
+	5500 3750 5500 3200
+$Comp
+L power:GND #PWR01
+U 1 1 5E8010F9
+P 4600 3550
+F 0 "#PWR01" H 4600 3300 50  0001 C CNN
+F 1 "GND" H 4600 3400 50  0000 C CNN
+F 2 "" H 4600 3550 50  0001 C CNN
+F 3 "" H 4600 3550 50  0001 C CNN
+	1    4600 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2650 4600 2500
+Wire Wire Line
+	4600 2500 5050 2500
+Wire Wire Line
+	4600 2950 4600 3450
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5E802EE3
+P 3950 2400
+F 0 "J1" H 3950 2500 50  0000 C CNN
+F 1 "Vin" H 3950 2200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3950 2400 50  0001 C CNN
+F 3 "~" H 3950 2400 50  0001 C CNN
+	1    3950 2400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2400 4250 2400
+Wire Wire Line
+	4250 2400 4250 2500
+Wire Wire Line
+	4250 2500 4150 2500
+Wire Wire Line
+	4250 2500 4600 2500
+Connection ~ 4250 2500
+Connection ~ 4600 2500
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5E803CFE
+P 3950 3350
+F 0 "J2" H 3950 3450 50  0000 C CNN
+F 1 "Gnd" H 3950 3150 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3950 3350 50  0001 C CNN
+F 3 "~" H 3950 3350 50  0001 C CNN
+	1    3950 3350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 3450 4250 3450
+Connection ~ 4600 3450
+Wire Wire Line
+	4600 3450 4600 3550
+Wire Wire Line
+	4150 3350 4250 3350
+Wire Wire Line
+	4250 3350 4250 3450
+Connection ~ 4250 3450
+Wire Wire Line
+	4250 3450 4600 3450
+$Comp
+L Device:R R1
+U 1 1 5E805BFB
+P 5500 1950
+F 0 "R1" V 5580 1950 50  0000 C CNN
+F 1 "240m" V 5500 1950 50  0000 C CNN
+F 2 "" V 5430 1950 50  0001 C CNN
+F 3 "~" H 5500 1950 50  0001 C CNN
+	1    5500 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 1950 5050 1950
+Wire Wire Line
+	5050 1950 5050 2500
+Connection ~ 5050 2500
+Wire Wire Line
+	5050 2500 5100 2500
+Wire Wire Line
+	5650 1950 6000 1950
+Wire Wire Line
+	6000 1950 6000 2500
+Wire Wire Line
+	6000 2500 5900 2500
+Wire Wire Line
+	5900 2600 6000 2600
+Wire Wire Line
+	6000 2600 6000 2500
+Connection ~ 6000 2500
+Wire Wire Line
+	5900 2700 6000 2700
+Wire Wire Line
+	6000 2700 6000 2600
+Connection ~ 6000 2600
+$Comp
+L Device:D_Schottky D1
+U 1 1 5E8071CC
+P 7000 3150
+F 0 "D1" H 7000 3250 50  0000 C CNN
+F 1 "D_Schottky" H 7000 3050 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 3150 50  0001 C CNN
+F 3 "~" H 7000 3150 50  0001 C CNN
+	1    7000 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L_Core_Ferrite L1
+U 1 1 5E807D84
+P 7250 2900
+F 0 "L1" V 7200 2900 50  0000 C CNN
+F 1 "88u" V 7360 2900 50  0000 C CNN
+F 2 "" H 7250 2900 50  0001 C CNN
+F 3 "~" H 7250 2900 50  0001 C CNN
+	1    7250 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E80A32D
+P 7500 3000
+F 0 "#PWR04" H 7500 2750 50  0001 C CNN
+F 1 "GND" H 7500 2850 50  0000 C CNN
+F 2 "" H 7500 3000 50  0001 C CNN
+F 3 "" H 7500 3000 50  0001 C CNN
+	1    7500 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2900 7000 3000
+$Comp
+L Device:CP C3
+U 1 1 5E80E0DB
+P 7000 3950
+F 0 "C3" H 7025 4050 50  0000 L CNN
+F 1 "1000u" H 7025 3850 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D12.5mm_P7.50mm" H 7038 3800 50  0001 C CNN
+F 3 "~" H 7000 3950 50  0001 C CNN
+	1    7000 3950
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5E80E7FF
+P 4600 2800
+F 0 "C1" H 4625 2900 50  0000 L CNN
+F 1 "100u" H 4625 2700 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 4638 2650 50  0001 C CNN
+F 3 "~" H 4600 2800 50  0001 C CNN
+	1    4600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E810327
+P 7000 4300
+F 0 "#PWR03" H 7000 4050 50  0001 C CNN
+F 1 "GND" H 7000 4150 50  0000 C CNN
+F 2 "" H 7000 4300 50  0001 C CNN
+F 3 "" H 7000 4300 50  0001 C CNN
+	1    7000 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4300 7000 4200
+Wire Wire Line
+	7000 3800 7000 3750
+$Comp
+L Device:R R3
+U 1 1 5E812662
+P 6350 3000
+F 0 "R3" V 6430 3000 50  0000 C CNN
+F 1 "953" V 6350 3000 50  0000 C CNN
+F 2 "" V 6280 3000 50  0001 C CNN
+F 3 "~" H 6350 3000 50  0001 C CNN
+	1    6350 3000
+	0    1    1    0   
+$EndComp
+Connection ~ 5500 3750
+Connection ~ 7000 3750
+Wire Wire Line
+	7000 3750 7000 3400
+$Comp
+L Device:R R2
+U 1 1 5E836730
+P 6100 3350
+F 0 "R2" V 6180 3350 50  0000 C CNN
+F 1 "8.2k" V 6100 3350 50  0000 C CNN
+F 2 "" V 6030 3350 50  0001 C CNN
+F 3 "~" H 6100 3350 50  0001 C CNN
+	1    6100 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5E837E56
+P 6100 3550
+F 0 "#PWR02" H 6100 3300 50  0001 C CNN
+F 1 "GND" H 6100 3400 50  0000 C CNN
+F 2 "" H 6100 3550 50  0001 C CNN
+F 3 "" H 6100 3550 50  0001 C CNN
+	1    6100 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3750 7000 3750
+Wire Wire Line
+	5900 2900 7000 2900
+Wire Wire Line
+	6100 3200 6100 3000
+Wire Wire Line
+	6100 3000 5900 3000
+Wire Wire Line
+	6100 3550 6100 3500
+Wire Wire Line
+	6100 3000 6200 3000
+Connection ~ 6100 3000
+Wire Wire Line
+	6500 3000 6600 3000
+Wire Wire Line
+	6600 3000 6600 3400
+Wire Wire Line
+	6600 3400 7000 3400
+Connection ~ 7000 3400
+Wire Wire Line
+	7000 3400 7000 3300
+Wire Wire Line
+	7100 2900 7000 2900
+Connection ~ 7000 2900
+Wire Wire Line
+	7500 3000 7500 2900
+Wire Wire Line
+	7500 2900 7400 2900
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5E8607DD
+P 7700 3650
+F 0 "J3" H 7700 3750 50  0000 C CNN
+F 1 "Vout" H 7700 3450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7700 3650 50  0001 C CNN
+F 3 "~" H 7700 3650 50  0001 C CNN
+	1    7700 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3650 7300 3650
+Wire Wire Line
+	7300 3650 7300 3750
+Wire Wire Line
+	7300 3750 7500 3750
+Wire Wire Line
+	7000 3750 7300 3750
+Connection ~ 7300 3750
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5E8640CD
+P 7700 4100
+F 0 "J4" H 7700 4200 50  0000 C CNN
+F 1 "Gnd" H 7700 3900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7700 4100 50  0001 C CNN
+F 3 "~" H 7700 4100 50  0001 C CNN
+	1    7700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4100 7300 4100
+Wire Wire Line
+	7300 4100 7300 4200
+Wire Wire Line
+	7300 4200 7500 4200
+Wire Wire Line
+	7300 4200 7000 4200
+Connection ~ 7300 4200
+Connection ~ 7000 4200
+Wire Wire Line
+	7000 4200 7000 4100
+$EndSCHEMATC
